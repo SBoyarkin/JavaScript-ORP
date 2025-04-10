@@ -1,6 +1,6 @@
 const obj = { name: 'мечник', health: 10, level: 2, attack: 80, defence: 40 };
 
-function orderByProps(obj, sortProp) {
+export default function orderByProps(obj, sortProp) {
   const result = {};
 
   for (const prop of sortProp) {
@@ -16,6 +16,3 @@ function orderByProps(obj, sortProp) {
   }
   return result;
 }
-
-const sortedObj = orderByProps(obj, ["name", "level"]);
-console.log(sortedObj);
