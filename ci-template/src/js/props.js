@@ -4,7 +4,7 @@ export default function orderByProps(obj, sortProp) {
   const result = {};
 
   for (const prop of sortProp) {
-    if (obj.hasOwnProperty(prop)) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
       result[prop] = obj[prop];
     }
   }
